@@ -38,7 +38,7 @@ fi
 export HELM_HOME="$(pwd)/.helm"
 export PATH="$(dirname $BINARY):$PATH"
 #export HELM_TILLER_SILENT=true
-helm init --client-only >/dev/null
+# helm init --client-only >/dev/null
 # Remove local repo to increase reproducibility and remove errors
 helm repo list |grep -qc local && $BINARY repo remove local >/dev/null
 
